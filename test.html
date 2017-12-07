@@ -1,16 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-	<meta charset="utf-8">
-	<title>Test de Ortografía</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-</head>
-<body>
-	
-	<!-- Libreria jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Libreria Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title>Cronómetro</title>
+        
+        
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	</head>
+    <body>
+    	<div class="container" style="margin-top: 20px; background-color:#73BFE6; color: #fff;text-align: center; font-size: 33px;">
+    		<div class="row">
+    		<div class="col-xs-4 col-xs-offset-4">
+        		<div id="timer">
+            		<div>
+                		<div id="hour">00</div>
+                		<div class="divider">:</div>
+                		<div id="minute">00</div>
+                		<div class="divider">:</div>
+                		<div id="second">00</div>                
+            		</div>
+            	
+        		</div>
+        	</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-xs-4 col-xs-offset-4">
+    			<button class="btn" style="color: black;" id="btn-comenzar">Comenzar</button>
+    		</div>
+    	</div>
+    	</div>
+<script>
+$(document).ready(function(){
+
+    var tiempo = {
+        hora: 0,
+        minuto: 0,
+        segundo: 0
+    };
+
+    var tiempo_corriendo = null;
+
+    $("#btn-comenzar").click(function(){
+        if ( $(this).text() == 'Comenzar' )
+        {
+            $(this).text('Detener');                        
+            tiempo_corriendo = setInterval(function(){
+                // Segundos
+                tiempo.segundo++;
+                if(tiempo.segundo >= 60)
+                {
+                    tiempo.segundo = 0;
+                    tiempo.minuto++;
+                }      
+
+                // Minutos
+                if(tiempo.minuto >= 60)
+                {
+                    tiempo.minuto = 0;
+                    tiempo.hora++;
+                }
+
+                $("#hour").text(tiempo.hora < 10 ? '0' + tiempo.hora : tiempo.hora);
+                $("#minute").text(tiempo.minuto < 10 ? '0' + tiempo.minuto : tiempo.minuto);
+                $("#second").text(tiempo.segundo < 10 ? '0' + tiempo.segundo : tiempo.segundo);
+            }, 1000);
+        }
+        else 
+        {
+            $(this).text('Comenzar');
+            clearInterval(tiempo_corriendo);
+        }
+    })
+})
+</script>
+  
+	</body>
 </html>
