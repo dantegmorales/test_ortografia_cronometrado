@@ -1,0 +1,21 @@
+.truncate{
+  width: calc(100% - 12px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+}
+.table > tbody > tr > td, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > td, 
+.table > tfoot > tr > th, 
+.table > thead > tr > td, 
+.table > thead > tr > th{
+  position: relative;
+}
+
+.tabla-toolnip{
+  padding-bottom: 15px !important;
+  font-size:0.846rem !important;
+  padding-top: 0px !important;
+}
