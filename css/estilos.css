@@ -1,0 +1,17 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.fondo{
+	background-color:#363D42;
+	color: #fff;
+	text-align: center;
+	font-size: 33px;
+}
+
+.pregunta{
+	background-color: #fff;
+	color: #000;
+	text-align: center;
+	font-size: 1em;
+}
