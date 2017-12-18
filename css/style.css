@@ -1,0 +1,41 @@
+*{
+	padding: 0;
+	margin: 0;
+	padding-top: 0;
+}
+body{
+	background-image: url(../bg-masthead.jpg);
+}
+.hide{
+	display: none;
+}
+
+
+.header{
+	color: #406A80;
+	text-align: center;
+	padding: 15px;
+	background-color: #fff;
+	-webkit-box-shadow: 3px 13px 50px -18px rgba(255,255,255,0.2);
+	-moz-box-shadow: 3px 13px 50px -18px rgba(255,255,255,0.2);
+	box-shadow: 3px 13px 50px -18px rgba(255,255,255,0.2);
+}
+.pregunta{
+	font-size: 20px;
+	color: #fff;
+	background: rgba(0,0,0,.9);
+	padding: 25px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	-webkit-box-shadow: 3px 13px 50px -18px rgba(255,255,255,1);
+	-moz-box-shadow: 3px 13px 50px -18px rgba(255,255,255,1);
+	box-shadow: 3px 13px 50px -18px rgba(255,255,255,1);
+}
+
+/*utilerias*/
+.p0{
+	padding: 0;
+}
+.mt20{
+	margin-top: 20px;
+}
