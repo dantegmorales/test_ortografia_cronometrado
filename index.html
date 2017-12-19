@@ -3,7 +3,7 @@
     <head>
         <title>Test de Ortografía</title>
         <meta charset="utf-8"/>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     </head>
@@ -14,52 +14,119 @@
             <h1>Test de Ortografía</h1>
         </div>
 
-        <div class="col-xs-4 col-xs-offset-3">
-            <!--<form>-->
+        <div class="col-xs-7 col-xs-offset-3">
+            <form>
+                <div class="pregunta" id="instrucciones_01" style=" text-align: justify;">
+                    <p>Este test de ortografía está pensado para conocer tu nivel ortográfico. Apreciarás el dominio ortográfico del vocabulario más usual y tu capacidad para acentuar correctamente las palabras.</p>
+                    <p>El test está diseñado en tres módulos y contarás con un tiempo límite para responder cada uno de ellos, te pedimos que leas atentamente las instrucciones ya que no hay opción de volver a preguntas anteriores.</p>
+                    <label class="btn btn-primary mt20" style="margin-left: 45%" id="siguiente_01">Siguiente</label>
+                </div>
+
+                <div class="pregunta hide" id="instrucciones_02" style=" text-align: justify;">
+                    <h2>PRIMER MÓDULO</h2>
+                    <p>De las siguientes situaciones que te vamos a presentar, elige la opción correcta para cada una de ellas. Contarás con un tiempo límite para responder cada pregunta, por lo que deberás responder con la mayor rapidez y certeza posible</p>
+                    <p>Ejemplo:</p>
+                    <p>Encuentra la palabra escrita de manera incorrecta:</p>
+                    <div class="radio" style="margin-left: 20px;">
+                        <input type="radio" disabled>Vaca
+                    </div>
+                    <div class="radio" style="margin-left: 20px;">
+                        <input type="radio" disabled>Entusiasmo
+                    </div>
+                    <div class="radio" style="margin-left: 20px;">
+                        <input type="radio"  checked>Correjido
+                    </div>
+                    <p>En el ejemplo anterior la respuesta <label class="text-info">correcta</label> es la ‘c’.</p>
+                    <label id="btn-comenzar" style="margin-left: 45%" class="btn btn-primary">INICIAR</label>
+                </div>
+
                 <div class="pregunta hide" id="pregunta1">
                     <p>1. Escribe la manera correcta de escribir en cifras: ocho millones trescientos veintisiete mil cuatrocientos cincuenta y uno.</p>
-                    <div class="radio">
+                    <div class="radio" style="margin-left: 20px;">
                         <input type="radio" name="optradio" value="falso" id="respuesta1">8327451
                     </div>
-                    <div class="radio">
+                    <div class="radio" style="margin-left: 20px;">
                         <input type="radio" name="optradio" value="falso" id="respuesta1">8327451
                     </div>
-                    <div class="radio">
+                    <div class="radio" style="margin-left: 20px;">
                         <input type="radio" name="optradio" value="falso" id="respuesta1">8327451
                     </div>
                     
                    
-                    <button class="btn btn-primary" id="btnP01">Siguiente</button>
+                    <label class="btn btn-primary" id="btnP01">Siguiente</label>
+                    <div id="segundos1"></div>
                 </div>
+
                 <div class="pregunta hide" id="pregunta2">
-                <p id="parrafo">"Pregunta 2"</p>
-                    <input type="radio" value="" id="respuesta1"> Other<br>
-                    <input type="radio" value="" id="respuesta2"> Other<br>
-                    <input type="radio" value="" id="respuesta3"> Other<br>
-                    <button class="boton" id="btnP02">Siguiente</button>
+                    <p>2. De la siguiente lista de palabras, encuentra la palabra escrita sin errores ortográficos:</p>
+                    <div class="radio" style="margin-left: 20px;">
+                        <input type="radio" name="optradio" value="falso" id="respuesta1">Extensiones
+                    </div>
+                    <div class="radio" style="margin-left: 20px;">
+                        <input type="radio" name="optradio" value="falso" id="respuesta1">Lúpus
+                    </div>
+                    <div class="radio" style="margin-left: 20px;">
+                        <input type="radio" name="optradio" value="falso" id="respuesta1">Hipotesis
+                    </div>
+                    
+                   
+                    <label class="btn btn-primary" id="btnP02">Siguiente</label>
                 </div>
-            <!--</form>-->
+
+                <div class="pregunta hide" id="pregunta3">
+                    <p>3. Encuentra la palabra escrita incorrectamente:</p>
+                    <div class="radio" style="margin-left: 20px;">
+                        <input type="radio" name="optradio" value="falso" id="respuesta1">Servicio 
+                    </div>
+                    <div class="radio" style="margin-left: 20px;">
+                        <input type="radio" name="optradio" value="falso" id="respuesta1">Consultoría
+                    </div>
+                    <div class="radio" style="margin-left: 20px;">
+                        <input type="radio" name="optradio" value="falso" id="respuesta1">Evaluacion Socioeconomica
+                    </div>
+                    
+                   
+                    <label class="btn btn-primary" id="btnP03">Siguiente</label>
+                </div>
+
+                <div class="pregunta hide" id="pregunta4">
+                    <p>4. De las siguientes frases ¿cuál está escrita incorrectamente?</p>
+                    <div class="radio" style="margin-left: 20px;">
+                        <input type="radio" name="optradio" value="falso" id="respuesta1">Estudio de preinversión para infraestructura
+                    </div>
+                    <div class="radio" style="margin-left: 20px;">
+                        <input type="radio" name="optradio" value="falso" id="respuesta1">Presentación Comercial olograma 
+                    </div>
+                    <div class="radio" style="margin-left: 20px;">
+                        <input type="radio" name="optradio" value="falso" id="respuesta1"> Estudio referente al comportamiento del consumidor
+                    </div>
+                    
+                   
+                    <label class="btn btn-primary" id="btnP04">Siguiente</label>
+                </div>
+            </form>
         </div>
     </div>
         
 
             
-        
-        <div class="pregunta hide" id="pregunta2">
+        <!-->
+        <div class="pregunta hide" id="">
             <p id="parrafo">"Pregunta 2"</p>
             <input type="radio" value="" id="respuesta1"> Other<br>
             <input type="radio" value="" id="respuesta2"> Other<br>
             <input type="radio" value="" id="respuesta3"> Other<br>
             <button class="boton" id="btnP02">Siguiente</button>
         </div>
-          <div class="pregunta hide" id="pregunta3">
+
+        <div class="pregunta hide" id="">
             <p id="parrafo">"Pregunta 3"</p>
             <input type="radio" value="" id="respuesta1"> Other<br>
             <input type="radio" value="" id="respuesta2"> Other<br>
             <input type="radio" value="" id="respuesta3"> Other<br>
             <button class="boton" id="btnP03">Siguiente</button>
         </div>
-          <div class="pregunta hide" id="pregunta4">
+          <div class="pregunta hide" id="">
             <p id="parrafo">"Pregunta 4"</p>
             <input type="radio" value="" id="respuesta1"> Other<br>
             <input type="radio" value="" id="respuesta2"> Other<br>
@@ -115,13 +182,13 @@
             <input type="radio" value="" id="respuesta3"> Other<br>
             <button class="boton" id="btnP11">Siguiente</button>
         </div>
-
-        <div class="pregunta">
-            <button id="btn-comenzar" class="boton">INICIAR</button>
-        </div>
+        <!-->
         
         
-        <div id="timer" class="hide">
+    
+        
+        
+        <div id="timer" class="pregunta">
             <div class="container">
                 <div id="hour">00</div>
                 <div class="divider">:</div>
@@ -139,9 +206,14 @@
 <script>
 $(document).ready(function(){
     
-    
+        $("#siguiente_01").click(function(){
+            $("#instrucciones_01").addClass("hide");
+            $("#instrucciones_02").removeClass("hide");
+        });
+
 
         $("#btn-comenzar").click(function(){
+             $("#instrucciones_02").addClass("hide");
         var tiempo = {
         hora: 0,
         minuto: 0,
@@ -149,11 +221,14 @@ $(document).ready(function(){
         };
 
         var tiempo_corriendo = null;
-        var tiempo_limite = null;  
+        var tiempo_limite = null;
+
+        var tiempo_p1=null; 
 
             tiempo_corriendo = setInterval(function(){
                 // Segundos
                 tiempo.segundo++;
+
                 if(tiempo.segundo >= 60)
                 {
                     //tiempo.segundo = 0;
@@ -163,6 +238,7 @@ $(document).ready(function(){
                 tiempo_limite=tiempo.segundo;
 
                 if (tiempo.segundo<20) {
+
                     $("#pregunta1").removeClass("hide");
                 } else if (tiempo.segundo>=20&&tiempo.segundo<40) {
                     $("#pregunta1").addClass("hide");
@@ -177,9 +253,12 @@ $(document).ready(function(){
 
                 $("#btnP01").click(function(){
                     tiempo.segundo=20;
+                    var tiempo_p1 = 0;
                     if (tiempo.segundo>=20&&tiempo.segundo<40) {
                         $("#pregunta2").removeClass("hide");
                         $("#pregunta1").addClass("hide");
+                        tiempo_p1++;
+                        $("#segundos1").text(tiempo_p1);
                     } else if (tiempo.segundo>40) {
                         $("#pregunta2").addClass("hide");
                         $("#pregunta3").removeClass("hide");
@@ -194,6 +273,7 @@ $(document).ready(function(){
 
                 $("#btnP03").click(function(){
                     tiempo.segundo=60;
+                    tiempo_individual=0;
                     $("#pregunta4").removeClass("hide");
                      $("#pregunta3").addClass("hide");
                 });
