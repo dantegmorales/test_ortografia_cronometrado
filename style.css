@@ -2,12 +2,20 @@
 *{
 	padding: 0;
 	margin: 0;
-}
 
+}
 body{
 	background:#FFFFFF;
 	font-family:Open Sans;
 	background-image: url(bg-masthead.jpg);
+	background-color: #fff;
+	background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height:100%;
 }
 .header{
 	background-color: #fff;
@@ -20,8 +28,24 @@ body{
 	-moz-box-shadow: 1px 16px 14px -4px rgba(255,255,255,0.3);
 	box-shadow: 1px 16px 14px -4px rgba(255,255,255,0.3);
 }
+.pregunta{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 20%;
+	margin-right:20%; 
+	text-align: center;
+	color: #fff;
+	font-size: 25px;
+	background: rgba(0,0,0,.7);
 
+	-webkit-box-shadow: 1px 16px 14px -4px rgba(255,255,255,0.3);
+	-moz-box-shadow: 1px 16px 14px -4px rgba(255,255,255,0.3);
+	box-shadow: 1px 16px 14px -4px rgba(255,255,255,0.4);
+}
 
+.mt20{
+	margin-top: 20px;
+}
 
 
 
@@ -31,7 +55,6 @@ body{
 #timer .container div{display:table-cell;font-size:60px;padding:10px;width:20px;}
 #timer .container .divider{width:10px;color:#ddd;}
 #btn-comenzar:hover{background:#fff;}
-
 .boton{
 	box-sizing:border-box;
 	background:#eee;border:none;
